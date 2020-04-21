@@ -13,7 +13,7 @@ describe("Async actions", () => {
     fetchMock.restore();
   });
 
-  describe("Load Courses Thunk", () => {
+  describe("Load Authors Thunk", () => {
     it("should create BEGIN_API_CALL and LOAD_AUTHORS_SUCCESS when loading courses", () => {
       fetchMock.mock("*", {
         body: authors,
