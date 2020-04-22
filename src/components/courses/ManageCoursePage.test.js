@@ -1,5 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
+import renderer from "react-test-renderer";
 import { authors, courses } from "../../../tools/mockData";
 import { ManageCoursePage } from "./ManageCoursePage";
 
@@ -12,9 +13,11 @@ loadAuthors: jest.fn(),
 loadCourses: jest.fn(),
 };
 
-it("show an error when trying to save an empty title field", () => {
-  const wrapper =  mount(<ManageCoursePage {...props} />);
-  wrapper.find("form").simulate("submit");
-  const error = wrapper.find(".alert").first();
-  expect(error.text()).toBe("Title is required.");
+it("should contain form with 3 input fields", () => {
+  const tree = renderer.create(
+      <ManageCoursePage {...props} />
+    );
+  
+    expect(tree).toMatchSnapshot();
 });
+  

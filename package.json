@@ -16,10 +16,7 @@
         "lines": 95,
         "statements": 95
       }
-    },
-    "setupFiles": [
-      "./tools/enzymeSetup.js"
-    ]
+    }
   },
   "dependencies": {
     "bootstrap": "4.3.1",

@@ -1,6 +1,6 @@
 import React from 'react';
-import TextInput from './TextInput';
 import renderer from 'react-test-renderer';
+import TextInput from './TextInput';
 
 it('renders correctly', () => {
   const tree = renderer
