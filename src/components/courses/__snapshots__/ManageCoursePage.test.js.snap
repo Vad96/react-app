@@ -1,15 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should contain form with 3 input fields 1`] = `
-<form
-  onSubmit={[Function]}
->
+exports[`should render correctly after clicking on the submit button 1`] = `
+<form>
   <h2>
     Add
      Course
   </h2>
   <div
-    className="form-group"
+    className="form-group has-error"
   >
     <label
       htmlFor="title"
@@ -25,6 +23,11 @@ exports[`should contain form with 3 input fields 1`] = `
         onChange={[Function]}
         type="text"
       />
+      <div
+        className="alert alert-danger"
+      >
+        Title is required.
+      </div>
     </div>
   </div>
   <div
@@ -65,10 +68,15 @@ exports[`should contain form with 3 input fields 1`] = `
           Dave Mustane
         </option>
       </select>
+      <div
+        className="alert alert-danger"
+      >
+        Author is required
+      </div>
     </div>
   </div>
   <div
-    className="form-group"
+    className="form-group has-error"
   >
     <label
       htmlFor="category"
@@ -84,11 +92,17 @@ exports[`should contain form with 3 input fields 1`] = `
         onChange={[Function]}
         type="text"
       />
+      <div
+        className="alert alert-danger"
+      >
+        Category is required
+      </div>
     </div>
   </div>
   <button
     className="btn btn-primary"
     disabled={false}
+    onSubmit={[Function]}
     type="submit"
   >
     Save

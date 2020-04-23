@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sets submit button text 'Save' when saving is false 1`] = `
-<form
-  onSubmit={[MockFunction]}
->
+<form>
   <h2>
     Edit
      Course
@@ -91,6 +89,7 @@ exports[`sets submit button text 'Save' when saving is false 1`] = `
   <button
     className="btn btn-primary"
     disabled={false}
+    onSubmit={[MockFunction]}
     type="submit"
   >
     Save
@@ -99,9 +98,7 @@ exports[`sets submit button text 'Save' when saving is false 1`] = `
 `;
 
 exports[`sets submit button text 'Saving...' when saving is true 1`] = `
-<form
-  onSubmit={[MockFunction]}
->
+<form>
   <h2>
     Edit
      Course
@@ -189,6 +186,7 @@ exports[`sets submit button text 'Saving...' when saving is true 1`] = `
   <button
     className="btn btn-primary"
     disabled={true}
+    onSubmit={[MockFunction]}
     type="submit"
   >
     Saving...
