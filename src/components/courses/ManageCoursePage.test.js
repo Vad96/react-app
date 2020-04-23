@@ -1,5 +1,5 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { create, act } from "react-test-renderer";
 import { authors, courses } from "../../../tools/mockData";
 import { ManageCoursePage } from "./ManageCoursePage";
 
@@ -14,7 +14,7 @@ function render(args) {
   
     const props = { ...defaultProps, ...args };
   
-    const tree = renderer.create(
+    const tree = create(
         <ManageCoursePage {...props} />
     );
     return tree
@@ -28,7 +28,7 @@ it("should render correctly after clicking on the submit button", () => {
         type: 'submit',
     });
     const eventMock = { preventDefault: jest.fn() };
-    renderer.act(() => button.props.onSubmit(eventMock));
+    act(() => button.props.onSubmit(eventMock));
 
     const snap = tree.toJSON();
     expect(snap).toMatchSnapshot();
