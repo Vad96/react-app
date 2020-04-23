@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render correctly after clicking on the submit button 1`] = `
+exports[`should render correctly after clicking submit button 1`] = `
 <form>
   <h2>
     Add

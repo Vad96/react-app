@@ -20,7 +20,7 @@ function render(args) {
     return tree
   }
 
-it("should render correctly after clicking on the submit button", () => {
+it("should render correctly after clicking submit button", () => {
     const tree = render();
     const instance = tree.root
 
