@@ -1,7 +1,11 @@
+//@flow
+
 import React from "react";
 import "./Spinner.css";
 
-const Spinner = () => {
+type SpinnerProps = {};
+
+const Spinner = (props: SpinnerProps) => {
   return <div className="loader">Loading...</div>;
 };
 

@@ -1,6 +1,17 @@
+//@flow
+
 import React from "react";
 
-const TextInput = ({ name, label, onChange, placeholder, value, error }) => {
+type TextInputProps = {
+  name: string,
+  label: string,
+  onChange: Function,
+  placeholder: string,
+  value: string,
+  error: string  
+}
+
+const TextInput = ({ name, label, onChange, placeholder, value, error }: TextInputProps) => {
   let wrapperClass = "form-group";
   if (error && error.length > 0) {
     wrapperClass += " " + "has-error";

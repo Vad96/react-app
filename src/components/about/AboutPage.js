@@ -1,6 +1,10 @@
+//@flow
+
 import React from "react";
 
-const AboutPage = () => (
+type AboutPageProps = {};
+
+const AboutPage = (props: AboutPageProps) => (
   <div>
     <h2>About</h2>
     <p>

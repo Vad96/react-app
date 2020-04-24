@@ -1,4 +1,16 @@
+//@flow
+
 import React from "react";
+
+type SelectInputProps = {
+  name: string,
+  label: string,
+  onChange: Function,
+  defaultOption: string,
+  value: string,
+  error: string,
+  options: Array<Object>
+}
 
 const SelectInput = ({
   name,
@@ -8,7 +20,7 @@ const SelectInput = ({
   value,
   error,
   options
-}) => {
+}: SelectInputProps) => {
   return (
     <div className="form-group">
       <label htmlFor={name}>{label}</label>
