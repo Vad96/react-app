@@ -9,7 +9,10 @@ type SelectInputProps = {
   defaultOption: string,
   value: string,
   error: string,
-  options: Array<Object>
+  options: Array<{
+    value: number,
+    text: string,
+  }>,
 }
 
 const SelectInput = ({

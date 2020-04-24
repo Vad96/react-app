@@ -5,7 +5,10 @@ import TextInput from "../common/TextInput";
 import SelectInput from "../common/SelectInput";
 
 type CourseFormProps = {
-  authors: Array<Object>,
+  authors: Array<{
+    id: number,
+    name: string,
+  }>,
   course: Object,
   errors: Object,
   onSave: Function,
@@ -19,7 +22,7 @@ const CourseForm = ({
   onSave,
   onChange,
   saving = false,
-  errors = {}
+  errors
 }: CourseFormProps) => {
   return (
     <form onSubmit={onSave}>
