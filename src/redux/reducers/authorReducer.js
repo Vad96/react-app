@@ -1,7 +1,16 @@
+//@flow
+
 import * as types from "../actions/actionTypes";
 import initialState from "./initialState";
 
-export default function authorReducer(state = initialState.authors, action) {
+type State = {
+    authors: Array<{
+        id: number,
+        name: string,
+    }>,
+}
+
+export default function authorReducer(state: State = initialState.authors, action: Object): State {
   switch (action.type) {
     case types.LOAD_AUTHORS_SUCCESS:
       return action.authors;
