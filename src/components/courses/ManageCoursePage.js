@@ -9,8 +9,15 @@ import { newCourse } from "../../../tools/mockData";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
+type courseObj = {
+    id: number,
+    title: string,
+    authorId: number,
+    category: string
+}
+
 type ManageCoursePageProps = {
-  course: Object,
+  course: courseObj,
   authors: Array<{
     id: number,
     name: string,
@@ -41,7 +48,8 @@ function ManageCoursePage({
   const [course, setCourse] = useState({ ...props.course });
   const [errors, setErrors] = useState({});
   const [saving, setSaving] = useState(false);
-
+console.log(course)
+console.log(history)
   useEffect(() => {
     if (courses.length === 0) {
       loadCourses().catch(error => {
@@ -66,7 +74,7 @@ function ManageCoursePage({
     }));
   }
 
-  function formIsValid() {
+  function formIsValid(): boolean {
     const { title, authorId, category } = course;
     const errors = {};
 
@@ -78,7 +86,7 @@ function ManageCoursePage({
     return Object.keys(errors).length === 0;
   }
 
-  function handleSave(event) {
+  function handleSave(event){
     event.preventDefault();
     if (!formIsValid()) return;
     setSaving(true);
