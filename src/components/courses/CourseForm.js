@@ -1,6 +1,17 @@
+//@flow
+
 import React from "react";
 import TextInput from "../common/TextInput";
 import SelectInput from "../common/SelectInput";
+
+type CourseFormProps = {
+  authors: Array<Object>,
+  course: Object,
+  errors: Object,
+  onSave: Function,
+  onChange: Function,
+  saving: boolean
+}
 
 const CourseForm = ({
   course,
@@ -9,7 +20,7 @@ const CourseForm = ({
   onChange,
   saving = false,
   errors = {}
-}) => {
+}: CourseFormProps) => {
   return (
     <form onSubmit={onSave}>
       <h2>{course.id ? "Edit" : "Add"} Course</h2>
@@ -21,6 +32,7 @@ const CourseForm = ({
       <TextInput
         name="title"
         label="Title"
+        placeholder="type smth"
         value={course.title}
         onChange={onChange}
         error={errors.title}
@@ -42,6 +54,7 @@ const CourseForm = ({
       <TextInput
         name="category"
         label="Category"
+        placeholder="type smth"
         value={course.category}
         onChange={onChange}
         error={errors.category}
