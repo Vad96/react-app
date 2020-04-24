@@ -11,8 +11,18 @@ import { toast } from "react-toastify";
 
 type ManageCoursePageProps = {
   course: Object,
-  authors: Array<Object>,
-  courses: Array<Object>,
+  authors: Array<{
+    id: number,
+    name: string,
+  }>,
+  courses: Array<{
+    id: number,
+    title: string,
+    slug: string,
+    authorId: number,
+    category: string,
+    authorName: string
+  }>,
   loadCourses: Function,
   loadAuthors: Function,
   saveCourse: Function,

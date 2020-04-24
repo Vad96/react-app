@@ -11,8 +11,18 @@ import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
 type CoursesPageProps = {
-  authors: Array<Object>,
-  courses: Array<Object>,
+  authors: Array<{
+    id: number,
+    name: string,
+  }>,
+  courses: Array<{
+    id: number,
+    title: string,
+    slug: string,
+    authorId: number,
+    category: string,
+    authorName: string
+  }>,
   actions: Object,
   loading: boolean  
 }

@@ -4,7 +4,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 type CourseListProps = {
-  courses: Array<Object>,
+  courses: Array<{
+    id: number,
+    title: string,
+    slug: string,
+    authorId: number,
+    category: string,
+    authorName: string
+  }>,
   onDeleteClick: Function  
 }
 
