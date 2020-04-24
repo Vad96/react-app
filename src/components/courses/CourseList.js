@@ -1,7 +1,14 @@
+//@flow
+
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CourseList = ({ courses, onDeleteClick }) => (
+type CourseListProps = {
+  courses: Array<Object>,
+  onDeleteClick: Function  
+}
+
+const CourseList = ({ courses, onDeleteClick }: CourseListProps) => (
   <table className="table">
     <thead>
       <tr>

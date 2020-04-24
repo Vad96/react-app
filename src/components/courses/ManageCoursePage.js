@@ -1,3 +1,5 @@
+//@flow
+
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { loadCourses, saveCourse } from "../../redux/actions/courseActions";
@@ -7,6 +9,16 @@ import { newCourse } from "../../../tools/mockData";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
+type ManageCoursePageProps = {
+  course: Object,
+  authors: Array<Object>,
+  courses: Array<Object>,
+  loadCourses: Function,
+  loadAuthors: Function,
+  saveCourse: Function,
+  history: Object
+}
+
 function ManageCoursePage({
   courses,
   authors,
@@ -15,7 +27,7 @@ function ManageCoursePage({
   saveCourse,
   history,
   ...props
-}) {
+}: ManageCoursePageProps) {
   const [course, setCourse] = useState({ ...props.course });
   const [errors, setErrors] = useState({});
   const [saving, setSaving] = useState(false);
@@ -85,7 +97,7 @@ function ManageCoursePage({
   );
 }
 
-export function getCourseBySlug(courses, slug) {
+export function getCourseBySlug(courses: Array<Object>, slug: string) {
   return courses.find(course => course.slug === slug) || null;
 }
 

@@ -1,3 +1,5 @@
+//@flow
+
 import React from "react";
 import { connect } from "react-redux";
 import * as courseActions from "../../redux/actions/courseActions";
@@ -8,7 +10,18 @@ import { Redirect } from "react-router-dom";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
-class CoursesPage extends React.Component {
+type CoursesPageProps = {
+  authors: Array<Object>,
+  courses: Array<Object>,
+  actions: Object,
+  loading: boolean  
+}
+
+type CoursesPageState = {
+  redirectToAddCoursePage: boolean
+}
+
+class CoursesPage extends React.Component<CoursesPageProps, CoursesPageState> {
   state = {
     redirectToAddCoursePage: false
   };
