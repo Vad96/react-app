@@ -48,8 +48,6 @@ function ManageCoursePage({
   const [course, setCourse] = useState({ ...props.course });
   const [errors, setErrors] = useState({});
   const [saving, setSaving] = useState(false);
-console.log(course)
-console.log(history)
   useEffect(() => {
     if (courses.length === 0) {
       loadCourses().catch(error => {
