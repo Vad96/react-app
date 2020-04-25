@@ -84,7 +84,7 @@ function ManageCoursePage({
     return Object.keys(errors).length === 0;
   }
 
-  function handleSave(event){
+  function handleSave(event: SyntheticEvent<any>){
     event.preventDefault();
     if (!formIsValid()) return;
     setSaving(true);
