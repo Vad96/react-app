@@ -10,7 +10,9 @@ type State = {
     }>,
 }
 
-export default function authorReducer(state: State = initialState.authors, action: Object): State {
+type Action = { type: "LOAD_AUTHORS_SUCCESS", authors: Array<Object> };
+
+export default function authorReducer(state: State = initialState.authors, action: Action) {
   switch (action.type) {
     case types.LOAD_AUTHORS_SUCCESS:
       return action.authors;
