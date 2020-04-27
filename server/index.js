@@ -22,10 +22,16 @@
 
 import express from 'express';
 import React from 'react';
+import {readFileSync} from 'fs';
+
 const app = new express();
+app.use(express.static("build"));
+
+
 
 app.get("/", async (_req, res) => {
-    res.send(`<div>he k</div>`);
+    const index = readFileSync('build/index.html', 'utf8');
+    res.send(index);
 });
 
 app.listen(7777);
