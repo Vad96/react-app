@@ -21,10 +21,11 @@ type CoursesPageProps = {
     slug: string,
     authorId: number,
     category: string,
-    authorName: string
+    authorName: string,
   }>,
   actions: Object,
-  loading: boolean  
+  loading: boolean,
+  apiCallsInProgress: number
 }
 
 type CoursesPageState = {
@@ -89,7 +90,9 @@ class CoursesPage extends React.Component<CoursesPageProps, CoursesPageState> {
   }
 }
 
-function mapStateToProps(state) {
+
+
+function mapStateToProps(state: CoursesPageProps) {
   return {
     courses:
       state.authors.length === 0
