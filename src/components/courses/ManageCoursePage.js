@@ -117,8 +117,9 @@ export function getCourseBySlug(courses: Array<Object>, slug: string) {
   return courses.find(course => course.slug === slug) || null;
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state: ManageCoursePageProps, ownProps: Object) {
   const slug = ownProps.match.params.slug;
+  console.log( typeof ownProps)
   const course =
     slug && state.courses.length > 0
       ? getCourseBySlug(state.courses, slug)
