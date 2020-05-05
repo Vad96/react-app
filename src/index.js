@@ -8,8 +8,8 @@ import configureStore from "./redux/configureStore";
 import { Provider as ReduxProvider } from "react-redux";
 
 const store = configureStore();
-if (store) {
-    hydrate(
+
+hydrate(
   <ReduxProvider store={store}>
     <Router>
       <App />
@@ -17,5 +17,3 @@ if (store) {
   </ReduxProvider>,
   document.getElementById("app")
 );
-}
-
