@@ -10,7 +10,12 @@ type State = {
     }>,
 }
 
-type Action = { type: "LOAD_AUTHORS_SUCCESS", authors: Array<Object> };
+type Authors = {    
+    id: number,
+    name: string,
+}
+
+type Action = { type: "LOAD_AUTHORS_SUCCESS", authors: Array<Authors> };
 
 export default function authorReducer(state: State = initialState.authors, action: Action) {
   switch (action.type) {
