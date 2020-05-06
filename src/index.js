@@ -7,11 +7,6 @@ import "./index.css";
 import configureStore from "./redux/configureStore";
 import { Provider as ReduxProvider } from "react-redux";
 
-const preloadedState = window.__PRELOADED_STATE__
-
-// Allow the passed state to be garbage-collected
-delete window.__PRELOADED_STATE__
-
 const store = configureStore();
 
 hydrate(
