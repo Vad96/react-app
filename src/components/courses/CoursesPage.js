@@ -28,9 +28,7 @@ type CoursesPageProps = {
   apiCallsInProgress: number
 }
 
-type CoursesPageState = {
-  redirectToAddCoursePage: boolean
-}
+type CoursesPageState = {|redirectToAddCoursePage: boolean|}
 
 class CoursesPage extends React.Component<CoursesPageProps, CoursesPageState> {
   state = {

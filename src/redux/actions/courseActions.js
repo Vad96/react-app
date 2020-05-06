@@ -4,7 +4,7 @@ import * as types from "./actionTypes";
 import * as courseApi from "../../api/courseApi";
 import { beginApiCall, apiCallError } from "./apiStatusActions";
 import type { Dispatch } from 'redux';
-type ThunkAction = (dispatch: Dispatch) => Array<Object>;
+type ThunkAction = (dispatch: Dispatch) => void;
 
 type CourseObj = {
     id: number,
@@ -13,29 +13,29 @@ type CourseObj = {
     category: string
 }
 
-type Action = {
-  type: "CREATE_COURSE_SUCCESS" | "UPDATE_COURSE_SUCCESS" | "DELETE_COURSE_OPTIMISTIC",
-  course: Object,
-}
+// type Action = {
+//   type: "CREATE_COURSE_SUCCESS" | "UPDATE_COURSE_SUCCESS" | "DELETE_COURSE_OPTIMISTIC",
+//   course: Object,
+// }
 
-type CoursesAction = {
-    type: "LOAD_COURSES_SUCCESS",
-    courses: Array<Object> 
-}
+// type CoursesAction = {
+//     type: "LOAD_COURSES_SUCCESS",
+//     courses: Array<Object> 
+// }
 
-export function loadCourseSuccess(courses: Array<Object>): CoursesAction {
+export function loadCourseSuccess(courses: Array<Object>) {
   return { type: "LOAD_COURSES_SUCCESS", courses};
 }
 
-export function createCourseSuccess(course: CourseObj): Action {
+export function createCourseSuccess(course: CourseObj) {
   return { type: "CREATE_COURSE_SUCCESS", course: Object };
 }
 
-export function updateCourseSuccess(course: CourseObj): Action {
+export function updateCourseSuccess(course: CourseObj) {
   return { type: "UPDATE_COURSE_SUCCESS", course: Object };
 }
 
-export function deleteCourseOptimistic(course: CourseObj): Action {
+export function deleteCourseOptimistic(course: CourseObj) {
   return { type: "DELETE_COURSE_OPTIMISTIC", course: Object };
 }
 
