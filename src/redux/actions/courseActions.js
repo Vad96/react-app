@@ -13,16 +13,6 @@ type CourseObj = {
     category: string
 }
 
-// type Action = {
-//   type: "CREATE_COURSE_SUCCESS" | "UPDATE_COURSE_SUCCESS" | "DELETE_COURSE_OPTIMISTIC",
-//   course: Object,
-// }
-
-// type CoursesAction = {
-//     type: "LOAD_COURSES_SUCCESS",
-//     courses: Array<Object> 
-// }
-
 export function loadCourseSuccess(courses: Array<Object>) {
   return { type: "LOAD_COURSES_SUCCESS", courses};
 }
