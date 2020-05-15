@@ -5,7 +5,7 @@ import React from "react";
 type SelectInputProps = {|
   name: string,
   label: string,
-  onChange: Function,
+  onChange:  (event: SyntheticInputEvent<EventTarget>) => void,
   defaultOption: string,
   value: string,
   error: string,
