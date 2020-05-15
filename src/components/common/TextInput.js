@@ -6,7 +6,7 @@ type TextInputProps = {
   name: string,
   label: string,
   onChange: Function,
-  placeholder: string,
+  placeholder?: string,
   value: string,
   error: string  
 }
