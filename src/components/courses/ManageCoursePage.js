@@ -20,9 +20,9 @@ type Props = {|
   course: CourseObj,
   authors: $ReadOnlyArray<Authors>,
   courses: Array<Courses>,
-  loadCourses: Function,
-  loadAuthors: Function,
-  saveCourse: Function,
+  loadCourses: () => Array<Courses>,
+  loadAuthors: () => Array<Authors>,
+  saveCourse: () => CourseObj,
   history: Object
 |}
 

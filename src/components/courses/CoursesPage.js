@@ -9,13 +9,10 @@ import CourseList from "./CourseList";
 import { Redirect } from "react-router-dom";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
-import type { Courses } from '../../types/types.js'
+import type { Courses, Authors } from '../../types/types.js'
 
 type CoursesPageProps = {|
-  authors: $ReadOnlyArray<{
-    id: number,
-    name: string,
-  }>,
+  authors: $ReadOnlyArray<Authors>,
   courses: $ReadOnlyArray<Courses>,
   actions: Object,
   loading: boolean,
