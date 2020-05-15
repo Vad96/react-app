@@ -2,18 +2,10 @@
 
 import * as types from "../actions/actionTypes";
 import initialState from "./initialState";
-import type { CourseObj } from '../../types/types.js'
+import type { Courses } from '../../types/types.js';
 
 type State = {
-    courses: Array<{
-    id: number,
-    title: string,
-    slug: string,
-    authorId: number,
-    category: string,
-    authorName: string,
-    course: CourseObj,
-  }>,
+    courses: Array<Courses>,
 }
 
 type Action = {
