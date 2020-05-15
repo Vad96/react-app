@@ -18,15 +18,15 @@ export function loadCourseSuccess(courses: Array<Object>) {
 }
 
 export function createCourseSuccess(course: CourseObj) {
-  return { type: "CREATE_COURSE_SUCCESS", course: Object };
+  return { type: "CREATE_COURSE_SUCCESS", course };
 }
 
 export function updateCourseSuccess(course: CourseObj) {
-  return { type: "UPDATE_COURSE_SUCCESS", course: Object };
+  return { type: "UPDATE_COURSE_SUCCESS", course };
 }
 
 export function deleteCourseOptimistic(course: CourseObj) {
-  return { type: "DELETE_COURSE_OPTIMISTIC", course: Object };
+  return { type: "DELETE_COURSE_OPTIMISTIC", course };
 }
 
 export function loadCourses() {

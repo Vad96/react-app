@@ -3,6 +3,13 @@
 import * as types from "../actions/actionTypes";
 import initialState from "./initialState";
 
+type courseObj = {
+    id: number,
+    title: string,
+    authorId: number,
+    category: string
+}
+
 type State = {
     courses: Array<{
     id: number,
@@ -11,7 +18,7 @@ type State = {
     authorId: number,
     category: string,
     authorName: string,
-    course: any,
+    course: courseObj,
   }>,
 }
 
