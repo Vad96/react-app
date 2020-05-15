@@ -2,7 +2,7 @@
 
 import React from "react";
 
-type SelectInputProps = {
+type SelectInputProps = {|
   name: string,
   label: string,
   onChange: Function,
@@ -13,7 +13,7 @@ type SelectInputProps = {
     value: number,
     text: string,
   }>,
-}
+|}
 
 const SelectInput = ({
   name,

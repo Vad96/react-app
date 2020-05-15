@@ -4,10 +4,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import type { Courses } from '../../types/types.js'
 
-type CourseListProps = {
+type CourseListProps = {|
   courses: $ReadOnlyArray<Courses>,
   onDeleteClick: Function  
-}
+|}
 
 const CourseList = ({ courses, onDeleteClick }: CourseListProps) => (
   <table className="table">

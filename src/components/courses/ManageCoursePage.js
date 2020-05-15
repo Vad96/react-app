@@ -16,7 +16,7 @@ type OwnProps = {|
   match: Object,
 |}
 
-type Props = {
+type Props = {|
   ...OwnProps,
   course: CourseObj,
   authors: Array<{
@@ -28,7 +28,7 @@ type Props = {
   loadAuthors: Function,
   saveCourse: Function,
   history: Object
-}
+|}
 
 function ManageCoursePage({
   courses,

@@ -11,7 +11,7 @@ import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 import type { Courses } from '../../types/types.js'
 
-type CoursesPageProps = {
+type CoursesPageProps = {|
   authors: $ReadOnlyArray<{
     id: number,
     name: string,
@@ -20,7 +20,7 @@ type CoursesPageProps = {
   actions: Object,
   loading: boolean,
   apiCallsInProgress: number
-}
+|}
 
 type CoursesPageState = {|redirectToAddCoursePage: boolean|}
 

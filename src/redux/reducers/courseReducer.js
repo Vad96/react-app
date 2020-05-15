@@ -4,14 +4,14 @@ import * as types from "../actions/actionTypes";
 import initialState from "./initialState";
 import type { Courses } from '../../types/types.js';
 
-type State = {
+type State = {|
     courses: Array<Courses>,
-}
+|}
 
-type Action = {
+type Action = {|
     type: string,
     action: Array<State> 
-}
+|}
     
 export default function courseReducer(state: Array<State> = initialState.courses, action: Action): Array<State> {
   switch (action.type) {

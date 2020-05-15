@@ -4,7 +4,7 @@ import React from "react";
 import TextInput from "../common/TextInput";
 import SelectInput from "../common/SelectInput";
 
-type CourseFormProps = {
+type CourseFormProps = {|
   authors: Array<{
     id: number,
     name: string,
@@ -14,7 +14,7 @@ type CourseFormProps = {
   onSave:  (event: SyntheticEvent<HTMLButtonElement>) => void,
   onChange:  (event: SyntheticInputEvent<EventTarget>) => void,
   saving: boolean
-}
+|}
 
 const CourseForm = ({
   course,

@@ -2,14 +2,14 @@
 
 import React from "react";
 
-type TextInputProps = {
+type TextInputProps = {|
   name: string,
   label: string,
   onChange: (event: SyntheticInputEvent<EventTarget>) => void,
   placeholder?: string,
   value: string,
   error: string  
-}
+|}
 
 const TextInput = ({ name, label, onChange, placeholder, value, error }: TextInputProps) => {
   let wrapperClass = "form-group";
