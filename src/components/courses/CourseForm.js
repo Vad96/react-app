@@ -5,10 +5,18 @@ import TextInput from "../common/TextInput";
 import SelectInput from "../common/SelectInput";
 import type { Courses, CourseObj, Authors } from '../../types/types.js';
 
+type Errors = {|
+    message: string,
+    title: string,
+    author: string,
+    category: string,
+    onSave: boolean
+|}
+
 type CourseFormProps = {|
   authors: $ReadOnlyArray<Authors>,
   course: CourseObj,
-  errors: Object,
+  errors: Errors,
   onSave:  (event: SyntheticEvent<HTMLButtonElement>) => void,
   onChange:  (event: SyntheticInputEvent<EventTarget>) => void,
   saving: boolean
