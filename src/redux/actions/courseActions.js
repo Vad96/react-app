@@ -4,14 +4,8 @@ import * as types from "./actionTypes";
 import * as courseApi from "../../api/courseApi";
 import { beginApiCall, apiCallError } from "./apiStatusActions";
 import type { Dispatch } from 'redux';
+import type { CourseObj } from '../../types/types.js'
 type ThunkAction = (dispatch: Dispatch) => void;
-
-type CourseObj = {
-    id: number,
-    title: string,
-    authorId: number,
-    category: string
-}
 
 export function loadCourseSuccess(courses: Array<Object>) {
   return { type: "LOAD_COURSES_SUCCESS", courses};

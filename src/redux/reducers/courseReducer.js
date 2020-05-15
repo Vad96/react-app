@@ -2,8 +2,9 @@
 
 import * as types from "../actions/actionTypes";
 import initialState from "./initialState";
+import type { CourseObj } from '../../types/types.js'
 
-type courseObj = {
+type CourseObj = {
     id: number,
     title: string,
     authorId: number,
@@ -18,7 +19,7 @@ type State = {
     authorId: number,
     category: string,
     authorName: string,
-    course: courseObj,
+    course: CourseObj,
   }>,
 }
 

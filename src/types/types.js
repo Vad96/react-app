@@ -8,3 +8,10 @@ export type Courses = {
     category: string,
     authorName: string,
 };
+
+export type CourseObj = {
+    id: number,
+    title: string,
+    authorId: number,
+    category: string
+}
