@@ -11,8 +11,8 @@ type CourseFormProps = {
   }>,
   course: Object,
   errors: Object,
-  onSave: Function,
-  onChange: Function,
+  onSave:  (event: SyntheticEvent<HTMLButtonElement>) => void,
+  onChange:  (event: SyntheticInputEvent<EventTarget>) => void,
   saving: boolean
 }
 
