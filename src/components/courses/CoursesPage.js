@@ -9,20 +9,14 @@ import CourseList from "./CourseList";
 import { Redirect } from "react-router-dom";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
+import type { Courses } from '../../types/types.js'
 
 type CoursesPageProps = {
   authors: $ReadOnlyArray<{
     id: number,
     name: string,
   }>,
-  courses: $ReadOnlyArray<{
-    id: number,
-    title: string,
-    slug: string,
-    authorId: number,
-    category: string,
-    authorName: string,
-  }>,
+  courses: $ReadOnlyArray<Courses>,
   actions: Object,
   loading: boolean,
   apiCallsInProgress: number

@@ -8,6 +8,7 @@ import CourseForm from "./CourseForm";
 import { newCourse } from "../../../tools/mockData";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
+import type { Courses } from '../../types/types.js'
 
 type courseObj = {
     id: number,
@@ -28,14 +29,7 @@ type Props = {
     id: number,
     name: string,
   }>,
-  courses: Array<{
-    id: number,
-    title: string,
-    slug: string,
-    authorId: number,
-    category: string,
-    authorName: string
-  }>,
+  courses: Array<Courses>,
   loadCourses: Function,
   loadAuthors: Function,
   saveCourse: Function,

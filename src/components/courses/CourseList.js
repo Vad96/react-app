@@ -2,16 +2,10 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import type { Courses } from '../../types/types.js'
 
 type CourseListProps = {
-  courses: Array<{
-    id: number,
-    title: string,
-    slug: string,
-    authorId: number,
-    category: string,
-    authorName: string
-  }>,
+  courses: $ReadOnlyArray<Courses>,
   onDeleteClick: Function  
 }
 

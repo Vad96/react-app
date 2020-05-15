@@ -5,7 +5,7 @@ import React from "react";
 type TextInputProps = {
   name: string,
   label: string,
-  onChange: Function,
+  onChange: (event: SyntheticInputEvent<EventTarget>) => void,
   placeholder?: string,
   value: string,
   error: string  
