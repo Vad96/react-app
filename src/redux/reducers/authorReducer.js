@@ -2,17 +2,10 @@
 
 import * as types from "../actions/actionTypes";
 import initialState from "./initialState";
+import type { Authors } from '../../types/types.js';
 
 type State = {|
-    authors: Array<{
-        id: number,
-        name: string,
-    }>,
-|}
-
-type Authors = {|    
-    id: number,
-    name: string,
+    authors: Array<Authors>,
 |}
 
 type Action = {| type: "LOAD_AUTHORS_SUCCESS", authors: Array<Authors> |};
