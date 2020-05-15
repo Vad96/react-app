@@ -4,7 +4,7 @@ export type Courses = {
     id: number,
     title: string,
     slug: string,
-    authorId: number,
+    authorId: string,
     category: string,
     authorName: string,
 };
@@ -12,6 +12,11 @@ export type Courses = {
 export type CourseObj = {
     id: number,
     title: string,
-    authorId: number,
+    authorId: string,
     category: string
+}
+
+export type Authors = {
+    id: number,
+    name: string,
 }

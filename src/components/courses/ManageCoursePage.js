@@ -8,8 +8,7 @@ import CourseForm from "./CourseForm";
 import { newCourse } from "../../../tools/mockData";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
-import type { Courses } from '../../types/types.js';
-import type { CourseObj } from '../../types/types.js';
+import type { Courses, CourseObj, Authors } from '../../types/types.js';
 
 type OwnProps = {|
   slug: string,
@@ -19,10 +18,7 @@ type OwnProps = {|
 type Props = {|
   ...OwnProps,
   course: CourseObj,
-  authors: Array<{
-    id: number,
-    name: string,
-  }>,
+  authors: $ReadOnlyArray<Authors>,
   courses: Array<Courses>,
   loadCourses: Function,
   loadAuthors: Function,

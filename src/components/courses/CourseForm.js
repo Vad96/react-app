@@ -3,13 +3,11 @@
 import React from "react";
 import TextInput from "../common/TextInput";
 import SelectInput from "../common/SelectInput";
+import type { Courses, CourseObj, Authors } from '../../types/types.js';
 
 type CourseFormProps = {|
-  authors: Array<{
-    id: number,
-    name: string,
-  }>,
-  course: Object,
+  authors: $ReadOnlyArray<Authors>,
+  course: CourseObj,
   errors: Object,
   onSave:  (event: SyntheticEvent<HTMLButtonElement>) => void,
   onChange:  (event: SyntheticInputEvent<EventTarget>) => void,

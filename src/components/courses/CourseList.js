@@ -2,11 +2,11 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import type { Courses, CourseObj } from '../../types/types.js'
+import type { Courses } from '../../types/types.js'
 
 type CourseListProps = {|
   courses: $ReadOnlyArray<Courses>,
-  onDeleteClick: (course: CourseObj) => void,
+  onDeleteClick: (course: Courses) => void,
 |}
 
 const CourseList = ({ courses, onDeleteClick }: CourseListProps) => (
